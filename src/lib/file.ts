@@ -85,7 +85,10 @@ export function transformRows <T, R>(fileContent: string, transformer: (row: T, 
 
                     const processedRow = transformer( row, index )
 
-                    list.push( processedRow )
+                    if( processedRow ){
+                        list.push( processedRow )
+                    }
+
                     
                 })
 
